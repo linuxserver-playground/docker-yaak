@@ -8,9 +8,10 @@ summary: |-
 upstream:
   url: https://yaak.app/
   version:
-    type: command
-    run: |-
-      curl -sX GET https://api.github.com/repos/mountain-loop/yaak/releases | jq -r '.[] | select(.prerelease != true) | select(.tag_name | contains("yaak-cli") | not) | .tag_name' | sort -rV | head -1
+    type: github_release
+    repo: mountain-loop/yaak
+    exclude: yaak-cli
+    sort: version
   sponsor:
   - name: gschier
     url: https://github.com/sponsors/gschier
