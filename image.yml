@@ -12,6 +12,9 @@ upstream:
     repo: mountain-loop/yaak
     exclude: yaak-cli
     sort: version
+    require_assets:
+      - asset: '^(?!.*cef).*amd64.*\.deb$'
+      - asset: '^(?!.*cef).*arm64.*\.deb$'
   sponsor:
   - name: gschier
     url: https://github.com/sponsors/gschier
