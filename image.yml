@@ -16,8 +16,11 @@ upstream:
       - asset: '^(?!.*cef).*amd64.*\.deb$'
       - asset: '^(?!.*cef).*arm64.*\.deb$'
   sponsor:
-  - name: gschier
+  - name: Yaak
     url: https://github.com/sponsors/gschier
+  notes:
+    type: github_release
+    repo: mountain-loop/yaak
 
 release:
   branch: main
